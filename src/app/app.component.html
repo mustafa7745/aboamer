@@ -1,2 +1,50 @@
-<h1>Aboamer</h1>
-<mat-slide-toggle>Toggle me!11</mat-slide-toggle>
+<div  class="header-one-{{direction}}">
+    <!-- <mat-slide-toggle>الوضع الداكن</mat-slide-toggle> -->
+    {{title}} 
+</div>
+<div  class="header-two-{{direction}}">
+    <nav class="navbar navbar-expand-lg bg-light" >
+        <div class="container-fluid">
+         
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">اطفاء الحريق</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">انذار السرقة</a>
+              </li>
+             
+            </ul>
+          </div>
+        </div>
+      </nav>
+</div>
+
+
+
+<div class="footer-one-{{direction}}">
+   
+         <button mat-mini-fab color="basic" aria-label="Example icon button with a menu icon" (click)=al()>
+        <img class="icon"  src="../assets/icons/whatsapp.svg" alt="" srcset="">
+    </button>
+    <button mat-mini-fab color="basic" aria-label="Example icon button with a menu icon" (click)=al()>
+        <img class="icon" src="../assets/icons/telegram.svg" alt="" srcset="">
+    </button>
+    <button mat-mini-fab color="basic" aria-label="Example icon button with a menu icon" (click)=al()>
+        <img class="icon" src="../assets/icons/twitter.svg" alt="" srcset="">
+    </button>
+    <button mat-mini-fab color="basic" aria-label="Example icon button with a menu icon" (click)=al()>
+        <img class="icon" src="../assets/icons/phone-call-outline.svg" alt="" srcset="">
+    </button>
+    <button mat-mini-fab color="basic" aria-label="Example icon button with a menu icon" (click)=al()>
+        <img class="icon" src="../assets/icons/facebook.svg" alt="" srcset="">
+    </button>
+   
+
+</div>
+
+<h1>{{title}}</h1>

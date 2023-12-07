@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'aboamer-site';
+  direction = "rtl"
+  title = 'مجموعة ابو عامر للامن والسلامة';
+   al() {
+    alert("mustafa")
+  }
 }

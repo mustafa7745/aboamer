@@ -1,0 +1,38 @@
+
+.header-one-rtl{
+    background: indianred;
+    color: white;
+    height: 25px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    direction: rtl;
+}
+.header-two-rtl{
+    direction: rtl;
+}
+.footer-one-rtl{
+    background: indianred;
+    color: white;
+    height: 50px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    direction: rtl;
+}
+.header-one-ltr{
+    background: indianred;
+    color: white;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.icon{
+    width: 26px;
+}
+.contact{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
