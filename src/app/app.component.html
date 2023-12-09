@@ -1,50 +1,86 @@
-<div  class="header-one-{{direction}}">
-    <!-- <mat-slide-toggle>الوضع الداكن</mat-slide-toggle> -->
-    {{title}} 
-</div>
-<div  class="header-two-{{direction}}">
-    <nav class="navbar navbar-expand-lg bg-light" >
-        <div class="container-fluid">
-         
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">اطفاء </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">انذار السرقة</a>
-              </li>
-             
-            </ul>
-          </div>
-        </div>
-      </nav>
-</div>
+<div class="header-one-{{direction}}">
+  <ng-template [ngIf]="lang== 'en'">
+    <div class="header-one-item">
+      <img class="icon" src="../assets/icons/english.svg" alt="" srcset="" (click)="switchLang()">
+    </div>
+  </ng-template>
+  <ng-template [ngIf]="lang== 'ar'">
+    <div class="header-one-item">
+      <img class="icon" src="../assets/icons/flag-for-yemen.svg" alt="" srcset="" (click)="switchLang()">
+    </div>
+  </ng-template>
+  {{title}}
+  <ng-template [ngIf]="mode== 'dark'">
+    <div class="header-one-item">
+      <img class="icon" src="../assets/icons/dark-mode.svg" alt="" srcset="" (click)="switchMode()">
+    </div>
+  </ng-template>
+  <ng-template [ngIf]="mode== 'light'">
+    <div class="header-one-item">
+      <img class="icon" src="../assets/icons/outline-light-mode.svg" alt="" srcset="" (click)="switchMode()">
+    </div>
+  </ng-template>
 
 
-
-<div class="footer-one-{{direction}}">
-   
-         <button mat-mini-fab color="basic" aria-label="Example icon button with a menu icon" (click)=al()>
-        <img class="icon"  src="../assets/icons/whatsapp.svg" alt="" srcset="">
-    </button>
-    <button mat-mini-fab color="basic" aria-label="Example icon button with a menu icon" (click)=al()>
-        <img class="icon" src="../assets/icons/telegram.svg" alt="" srcset="">
-    </button>
-    <button mat-mini-fab color="basic" aria-label="Example icon button with a menu icon" (click)=al()>
-        <img class="icon" src="../assets/icons/twitter.svg" alt="" srcset="">
-    </button>
-    <button mat-mini-fab color="basic" aria-label="Example icon button with a menu icon" (click)=al()>
-        <img class="icon" src="../assets/icons/phone-call-outline.svg" alt="" srcset="">
-    </button>
-    <button mat-mini-fab color="basic" aria-label="Example icon button with a menu icon" (click)=al()>
-        <img class="icon" src="../assets/icons/facebook.svg" alt="" srcset="">
-    </button>
-   
 
 </div>
 
+
+
+<!-- <li *ngFor="let user of category; index as i; first as isFirst">
+   {{user}}
+</li> -->
+
+<ng-template [ngIf]="width < 450">
+  <div class="header-two-{{direction}}">
+
+
+    @for (item of category; track item.id; let idx = $index, e = $even) {
+    <ng-template [ngIf]="idx < 5">
+      <a href="#" target="_blank" rel="noopener noreferrer" class="header-two-item">
+        {{item.name }}
+      </a>
+
+    </ng-template>
+
+
+
+    }
+    <a href="#" target="_blank" rel="noopener noreferrer" class="header-two-item">
+      المزيد
+    </a>
+    <!-- <div>
+
+    </div>
+ <li class="nav-item">
+      <a class="nav-link active" aria-current="page" href="#">اطفاء </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link active" aria-current="page" href="#">انذار السرقeة</a>
+    </li> -->
+  </div>
+
+</ng-template>
 <h1>{{title}}</h1>
+
+<div>
+  <div class="footer-one-{{direction}}">
+    <button mat-mini-fab color="basic" aria-label="Example icon button with a menu icon" (click)=al()>
+      <img class="icon" src="../assets/icons/whatsapp.svg" alt="" srcset="">
+    </button>
+    <button mat-mini-fab color="basic" aria-label="Example icon button with a menu icon" (click)=al()>
+      <img class="icon" src="../assets/icons/telegram.svg" alt="" srcset="">
+    </button>
+    <button mat-mini-fab color="basic" aria-label="Example icon button with a menu icon" (click)=al()>
+      <img class="icon" src="../assets/icons/twitter.svg" alt="" srcset="">
+    </button>
+    <button mat-mini-fab color="basic" aria-label="Example icon button with a menu icon" (click)=al()>
+      <img class="icon" src="../assets/icons/phone-call-outline.svg" alt="" srcset="">
+    </button>
+    <button mat-mini-fab color="basic" aria-label="Example icon button with a menu icon" (click)=al()>
+      <img class="icon" src="../assets/icons/facebook.svg" alt="" srcset="">
+    </button>
+
+
+  </div>
+</div>

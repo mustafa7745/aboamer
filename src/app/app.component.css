@@ -9,7 +9,27 @@
     direction: rtl;
 }
 .header-two-rtl{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
     direction: rtl;
+}
+.header-two-item{
+    text-align: center;
+    font-size: 10px;
+    border: 1px solid;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    text-decoration: none;
+    color: #c34343;
+    background-color: aliceblue;
+}
+.header-one-item:hover{
+   cursor: pointer;
 }
 .footer-one-rtl{
     background: indianred;
