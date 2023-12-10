@@ -138,3 +138,8 @@
 .header-one-title {
     margin: 1px;
 }
+
+.header-two-item:hover {
+    background-color: darkblue;
+    color: aliceblue;
+}
