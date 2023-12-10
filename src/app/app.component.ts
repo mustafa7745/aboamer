@@ -1,6 +1,6 @@
 import { Component, HostListener, OnInit, PLATFORM_ID, Inject } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
-import { getWindow } from "ssr-window";
+// import { getWindow } from "ssr-window";
 import { ApiHandlerService } from './services/api-handler.service';
 
 @Component({
@@ -117,7 +117,7 @@ export class AppComponent implements OnInit {
       this.initMode()
      
     }
- this.width = getWindow().innerWidth;
+
 
     // this.postsServices.fetchDataFrpApi().subscribe((data)=>{
     //   this.apiData = data
