@@ -8,6 +8,8 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import {MatIconModule} from '@angular/material/icon';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatButtonModule} from '@angular/material/button';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { ApiHandlerService } from './services/api-handler.service';
 
 
 @NgModule({
@@ -21,10 +23,12 @@ import {MatButtonModule} from '@angular/material/button';
     MatSlideToggleModule,
     MatIconModule,
     MatButtonModule,
+    // HttpClientModule
     
   ],
   providers: [
-    provideClientHydration()
+    provideClientHydration(),
+    // ApiHandlerService
   ],
   bootstrap: [AppComponent]
 })

@@ -1,6 +1,7 @@
 import { Component, HostListener, OnInit, PLATFORM_ID, Inject } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
 import { getWindow } from "ssr-window";
+import { ApiHandlerService } from './services/api-handler.service';
 
 @Component({
   selector: 'app-root',
@@ -10,7 +11,8 @@ import { getWindow } from "ssr-window";
 export class AppComponent implements OnInit {
   isBrowserPaltform = false
 
-  constructor(@Inject(PLATFORM_ID) private _platformId: Object) { }
+  apiData:any
+  constructor(@Inject(PLATFORM_ID) private _platformId: Object,private postsServices:ApiHandlerService) { }
 
   category = [
     { "id": 1, "name": "إطفاء الحرائق" },
@@ -100,13 +102,21 @@ export class AppComponent implements OnInit {
     }
   }
 
+
+
   ngOnInit() {
     if (isPlatformBrowser(this._platformId)) {
       this.initLang()
       this.initMode()
+     
     }
+ this.width = getWindow().innerWidth;
 
-    this.width = getWindow().innerWidth;
+    // this.postsServices.fetchDataFrpApi().subscribe((data)=>{
+    //   this.apiData = data
+    // })
+
+   
   }
   //   @HostListener('window:resize',['$event'])
   //   getScreenSize() {

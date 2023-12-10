@@ -9,7 +9,8 @@
       <img class="icon" src="../assets/icons/flag-for-yemen.svg" alt="" srcset="" (click)="switchLang()">
     </div>
   </ng-template>
-  {{title}}
+  <h1>{{title}}</h1>
+  
   <ng-template [ngIf]="mode== 'dark'">
     <div class="header-one-item">
       <img class="icon" src="../assets/icons/dark-mode.svg" alt="" srcset="" (click)="switchMode()">
@@ -20,10 +21,8 @@
       <img class="icon" src="../assets/icons/outline-light-mode.svg" alt="" srcset="" (click)="switchMode()">
     </div>
   </ng-template>
-
-
-
 </div>
+
 
 
 
@@ -61,7 +60,20 @@
   </div>
 
 </ng-template>
-<h1>{{title}}</h1>
+
+
+<!-- <div>
+  <h2>Api Data</h2>
+  <ul *ngFor="let post of apiData">
+    <li>
+      <h3>{{post.title}}</h3>
+      <p>{{post.body}}</p>
+    </li>
+  </ul>
+</div> -->
+
+
+<!-- <h1>{{title}}</h1> -->
 
 <div>
   <div class="footer-one-{{direction}}">
