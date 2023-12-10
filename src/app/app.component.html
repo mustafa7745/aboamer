@@ -29,24 +29,20 @@
 <!-- <li *ngFor="let user of category; index as i; first as isFirst">
    {{user}}
 </li> -->
-
-<ng-template [ngIf]="width < 450">
-  <div class="header-two-{{direction}}">
-
-
-    @for (item of category; track item.id; let idx = $index, e = $even) {
-    <ng-template [ngIf]="idx < 5">
+<span class="width-320">
+<div class="header-two-{{direction}}">
+    @for (item of category320; track item.id; let idx = $index, e = $even) {
       <a href="#" target="_blank" rel="noopener noreferrer" class="header-two-item">
-        {{item.name }}
+        <span class="category-item">
+            {{item.name }}
+        </span>
+       
       </a>
-
-    </ng-template>
-
-
-
     }
     <a href="#" target="_blank" rel="noopener noreferrer" class="header-two-item">
-      المزيد
+      <span class="category-item">
+        المزيد
+      </span>
     </a>
     <!-- <div>
 
@@ -58,8 +54,34 @@
       <a class="nav-link active" aria-current="page" href="#">انذار السرقeة</a>
     </li> -->
   </div>
+</span>
 
-</ng-template>
+<span class="width-365">
+  <div class="header-two-{{direction}}">
+      @for (item of category365; track item.id; let idx = $index, e = $even) {
+        <a href="#" target="_blank" rel="noopener noreferrer" class="header-two-item">
+          <span class="category-item">
+              {{item.name }}
+          </span>
+         
+        </a>
+      }
+      <a href="#" target="_blank" rel="noopener noreferrer" class="header-two-item">
+        <span class="category-item">
+          المزيد
+        </span>
+      </a>
+      <!-- <div>
+  
+      </div>
+   <li class="nav-item">
+        <a class="nav-link active" aria-current="page" href="#">اطفاء </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active" aria-current="page" href="#">انذار السرقeة</a>
+      </li> -->
+    </div>
+  </span>
 
 
 <!-- <div>

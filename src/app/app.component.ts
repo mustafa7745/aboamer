@@ -14,7 +14,7 @@ export class AppComponent implements OnInit {
   apiData:any
   constructor(@Inject(PLATFORM_ID) private _platformId: Object,private postsServices:ApiHandlerService) { }
 
-  category = [
+  category320= [
     { "id": 1, "name": "إطفاء الحرائق" },
     { "id": 2, "name": "انذار السرقة" },
     { "id": 3, "name": "أنظمة المراقبة" },
@@ -22,7 +22,11 @@ export class AppComponent implements OnInit {
     { "id": 5, "name": "السلامة المهنية" },
     // {"id":2,"name":"Fire Fighting"}
   ]
-
+  category365= this.category320.concat( [
+    { "id": 5, "name": "السلامة الطبية" },
+  ])
+ 
+  
   lang: any
   mode: any
   direction = "rtl"
