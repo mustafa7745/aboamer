@@ -224,6 +224,27 @@
         display: inherit;
     } */
 }
+.category{
+    border: 1px solid;
+    margin: 15px;
+    border-radius: 10px;
+    /* height: 40dvw; */
+}
+
+.sub-category-image{
+    text-align: center;
+    /* width: -webkit-fill-available; */
+    border-radius: 15px;
+    margin: 12px;
+    height: 50dvw;
+}
+.category-title{
+    text-align: center;
+    background: brown;
+    color: white;
+    padding: 10px;
+    border-radius: 8px 8px 0px 0px
+}
 @media only screen and (min-device-width : 1441px) and (max-device-width : 4000px) {
     /* .category-item {
         font-size: px;
