@@ -14,21 +14,23 @@ export class AppComponent implements OnInit {
   apiData:any
   constructor(@Inject(PLATFORM_ID) private _platformId: Object,private postsServices:ApiHandlerService) { }
 
-  category0_374= [
+  category= [
     { "id": 1, "name": "إطفاء الحرائق" },
     { "id": 2, "name": "انذار السرقة" },
     { "id": 3, "name": "أنظمة المراقبة" },
     { "id": 4, "name": "أنظمة التحكم والوصول" },
     { "id": 5, "name": "السلامة المهنية" },
-    // {"id":2,"name":"Fire Fighting"}
-  ]
-  category375_425= this.category0_374.concat( [
     { "id": 5, "name": "السلامة الطبية" },
-  ])
+    { "id": 5, "name": "منتجات اخرى" }
+   
+  ]
+  // category375_425= this.category0_374.concat( [
+  //   ,
+  // ])
  
-  category426_580= this.category375_425.concat( [
-    { "id": 5, "name": "منتجات اخرى" },
-  ])
+  // category426_580= this.category375_425.concat( [
+  //  ,
+  // ])
   
   lang: any
   mode: any

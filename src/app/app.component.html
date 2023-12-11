@@ -1,5 +1,5 @@
-<div class="header-one-{{direction}}">
-  <ng-template [ngIf]="lang== 'en'">
+<div class="header-one">
+  <!-- <ng-template [ngIf]="lang== 'en'">
     <div class="header-one-item">
       <img class="icon" src="../assets/icons/english.svg" alt="" srcset="" (click)="switchLang()">
     </div>
@@ -8,9 +8,9 @@
     <div class="header-one-item">
       <img class="icon" src="../assets/icons/flag-for-yemen.svg" alt="" srcset="" (click)="switchLang()">
     </div>
-  </ng-template>
+  </ng-template> -->
   <h6 class="header-one-title">{{title}}</h6>
-  
+<!--   
   <ng-template [ngIf]="mode== 'dark'">
     <div class="header-one-item">
       <img class="icon" src="../assets/icons/dark-mode.svg" alt="" srcset="" (click)="switchMode()">
@@ -20,7 +20,7 @@
     <div class="header-one-item">
       <img class="icon" src="../assets/icons/outline-light-mode.svg" alt="" srcset="" (click)="switchMode()">
     </div>
-  </ng-template>
+  </ng-template> -->
 </div>
 
 
@@ -30,8 +30,8 @@
    {{user}}
 </li> -->
 <span class="width-0_374">
-<div class="header-two-{{direction}}">
-    @for (item of category0_374; track item.id; let idx = $index, e = $even) {
+<div class="header-two">
+    @for (item of category; track item.id; let idx = $index, e = $even) {
       <a href="#" target="_blank" rel="noopener noreferrer" class="header-two-item">
         <span class="category-item">
             {{item.name }}
@@ -39,11 +39,7 @@
        
       </a>
     }
-    <a href="#" target="_blank" rel="noopener noreferrer" class="header-two-item">
-      <span class="category-item">
-        المزيد
-      </span>
-    </a>
+  
     <!-- <div>
 
     </div>
@@ -56,59 +52,9 @@
   </div>
 </span>
 
-<span class="width-375_425">
-  <div class="header-two-{{direction}}">
-      @for (item of category375_425; track item.id; let idx = $index, e = $even) {
-        <a href="#" target="_blank" rel="noopener noreferrer" class="header-two-item">
-          <span class="category-item">
-              {{item.name }}
-          </span>
-         
-        </a>
-      }
-      <a href="#" target="_blank" rel="noopener noreferrer" class="header-two-item">
-        <span class="category-item">
-          المزيد
-        </span>
-      </a>
-      <!-- <div>
-  
-      </div>
-   <li class="nav-item">
-        <a class="nav-link active" aria-current="page" href="#">اطفاء </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link active" aria-current="page" href="#">انذار السرقeة</a>
-      </li> -->
-    </div>
-  </span>
 
-  <span class="width-426_580">
-    <div class="header-two-{{direction}}">
-        @for (item of category426_580; track item.id; let idx = $index, e = $even) {
-          <a href="#top" target="_blank" rel="noopener noreferrer" class="header-two-item">
-            <span class="category-item">
-                {{item.name }}
-            </span>
-           
-          </a>
-        }
-        <a href="#" target="_blank" rel="noopener noreferrer" class="header-two-item">
-          <span class="category-item">
-            المزيد
-          </span>
-        </a>
-        <!-- <div>
-    
-        </div>
-     <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">اطفاء </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">انذار السرقeة</a>
-        </li> -->
-      </div>
-    </span>
+
+
 
 <!-- <div>
   <h2>Api Data</h2>
