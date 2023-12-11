@@ -233,7 +233,7 @@
 
 .sub-category-image{
     text-align: center;
-    /* width: -webkit-fill-available; */
+    width: -webkit-fill-available;
     border-radius: 15px;
     margin: 12px;
     height: 50dvw;
