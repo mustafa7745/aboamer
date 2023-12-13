@@ -2,6 +2,7 @@ import { Component, HostListener, OnInit, PLATFORM_ID, Inject } from '@angular/c
 import { isPlatformBrowser } from '@angular/common';
 // import { getWindow } from "ssr-window";
 import { ApiHandlerService } from './services/api-handler.service';
+import { log } from 'console';
 
 @Component({
   selector: 'app-root',
@@ -14,15 +15,42 @@ export class AppComponent implements OnInit {
   apiData:any
   constructor(@Inject(PLATFORM_ID) private _platformId: Object,private postsServices:ApiHandlerService) { }
 
+//   var donut: DonutChartModel = {
+//     dimension: 1,
+//     innerRadius: 2
+// };
+
+subCategory(id:any,name:string,image:string) {
+  return {
+    "id":id,
+    "sub_category_name":name,
+    "sub_category_image":image
+  }
+}
+subCategoriesFireFighting =[
+  this.subCategory(1,"طفايات الحريق","../assets/fire-fighting/fire-extinguthers.jpg"),
+  this.subCategory(2,"انذار الحريق","../assets/fire-fighting/fire-alarm.jpg"),
+  this.subCategory(3,"انظمة الاطفاء بالرش","../assets/fire-fighting/fire-suppression-system.jpg"),
+  this.subCategory(4,"معدات اطفاء الحريق","../assets/fire-fighting/fire-fighting-equipment.jpg"),
+  this.subCategory(4,"معدات السلامة","../assets/fire-fighting/saftey-equipment.jpg"),
+  // this.subCategory(2,"انظمة انذار الحريق","../assets/image1.jpg")
+]
+subCategoriesBurgularAlarm =[
+  // this.subCategory(1,"طفايات الحريق","../assets/fire-extinguthers.jpg"),
+  // this.subCategory(2,"انظمة انذار الحريق","../assets/image1.jpg")
+]
+
+my = 0
+
+
   category= [
-    { "id": 1, "name": "إطفاء الحرائق" },
-    { "id": 2, "name": "انذار السرقة" },
+    { "id": 1, "name": "إطفاء الحرائق" , "sub_categories":this.subCategoriesFireFighting },
+    { "id": 2, "name": "انذار السرقة" , "sub_categories":this.subCategoriesBurgularAlarm  },
     { "id": 3, "name": "أنظمة المراقبة" },
     { "id": 4, "name": "أنظمة التحكم والوصول" },
-    { "id": 5, "name": "السلامة المهنية" },
-    { "id": 5, "name": "السلامة الطبية" },
-    { "id": 5, "name": "منتجات اخرى" }
-   
+    { "id": 6, "name": "السلامة المهنية" },
+    { "id": 7, "name": "السلامة الطبية" },
+    { "id": 8, "name": "منتجات اخرى" }
   ]
   // category375_425= this.category0_374.concat( [
   //   ,
@@ -115,6 +143,7 @@ export class AppComponent implements OnInit {
 
   ngOnInit() {
     if (isPlatformBrowser(this._platformId)) {
+      console.log(this.category)
       this.initLang()
       this.initMode()
      

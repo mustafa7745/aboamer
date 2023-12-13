@@ -228,15 +228,26 @@
     border: 1px solid;
     margin: 15px;
     border-radius: 10px;
+    height: 43vh;
+    width: 41vh;
+    text-align: center;
     /* height: 40dvw; */
+}
+
+.category-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .sub-category-image{
     text-align: center;
-    width: -webkit-fill-available;
+
+    border: 1px solid;
     border-radius: 15px;
     margin: 12px;
-    height: 50dvw;
+    height: 30vh;
+    width: 38vh;
 }
 .category-title{
     text-align: center;
@@ -245,6 +256,11 @@
     padding: 10px;
     border-radius: 8px 8px 0px 0px
 }
+
+.image-view{
+    width: -webkit-fill-available;
+}
+
 @media only screen and (min-device-width : 1441px) and (max-device-width : 4000px) {
     /* .category-item {
         font-size: px;
