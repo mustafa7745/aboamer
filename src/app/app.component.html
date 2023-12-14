@@ -9,7 +9,7 @@
       <img class="icon" src="../assets/icons/flag-for-yemen.svg" alt="" srcset="" (click)="switchLang()">
     </div>
   </ng-template> -->
-  <h6 class="header-one-title">{{title}}</h6>
+  <h5 class="header-one-title">{{title}}</h5>
   <!--   
   <ng-template [ngIf]="mode== 'dark'">
     <div class="header-one-item">
@@ -117,24 +117,32 @@ border-radius: 15px;
 margin: 12px;"> -->
 <!-- <h1>{{title}}</h1> -->
 
- <div>
+<div>
+  <div class="contact-text">
+    وسائل التواصل معنا
+  </div>
   <div class="footer-one-{{direction}}">
-    <button mat-mini-fab color="basic" aria-label="Example icon button with a menu icon" (click)=al()>
-      <img class="icon" src="../assets/icons/whatsapp.svg" alt="" srcset="">
-    </button>
-    <button mat-mini-fab color="basic" aria-label="Example icon button with a menu icon" (click)=al()>
-      <img class="icon" src="../assets/icons/telegram.svg" alt="" srcset="">
-    </button>
-    <button mat-mini-fab color="basic" aria-label="Example icon button with a menu icon" (click)=al()>
-      <img class="icon" src="../assets/icons/twitter.svg" alt="" srcset="">
-    </button>
-    <button mat-mini-fab color="basic" aria-label="Example icon button with a menu icon" (click)=al()>
-      <img class="icon" src="../assets/icons/phone-call-outline.svg" alt="" srcset="">
-    </button>
-    <button mat-mini-fab color="basic" aria-label="Example icon button with a menu icon" (click)=al()>
-      <img class="icon" src="../assets/icons/facebook.svg" alt="" srcset="">
-    </button>
+
+    <a  href="//api.whatsapp.com/send?phone=9677779999020&text=السلام عليكم" target="_blank">
+      <img class="icon-contact" src="../assets/icons/whatsapp.svg" alt="" srcset="">
+    </a>
+    <a href="https://t.me/Abo_amer_company_bot" target="_blank">
+      <img class="icon-contact" src="../assets/icons/telegram.svg" alt="" srcset="">
+    </a>
+    <a>
+      <img class="icon-contact" src="../assets/icons/twitter.svg" alt="" srcset="">
+    </a>
+    <a href="tel:9677779999020">
+      <img class="icon-contact" src="../assets/icons/phone-call-outline.svg" alt="" srcset="">
+    </a>
+    <a href="https://www.facebook.com/abuamergroup" target="_blank">
+      <img class="icon-contact" src="../assets/icons/facebook.svg" alt="" srcset="" >
+    </a>
+    <a href="https://www.instagram.com/abuamer_group" target="_blank">
+      <img class="icon-contact" src="../assets/icons/instagram.svg" alt="" srcset="">
+    </a>
+
 
 
   </div>
- </div> 
+</div>

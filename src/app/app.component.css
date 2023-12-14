@@ -45,8 +45,13 @@
     align-items: center;
 }
 
-.icon {
+.icon-contact {
     width: 26px;
+}
+.contact-text{
+    text-align: center;
+    background: brown;
+    color: aliceblue;
 }
 
 .contact {

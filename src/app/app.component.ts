@@ -36,7 +36,27 @@ subCategoriesFireFighting =[
   // this.subCategory(2,"انظمة انذار الحريق","../assets/image1.jpg")
 ]
 subCategoriesBurgularAlarm =[
-  // this.subCategory(1,"طفايات الحريق","../assets/fire-extinguthers.jpg"),
+  this.subCategory(1,"انظمة انذار السرقة","../assets/burglar-alarm/burglar-alarm-system.webp"),
+  // this.subCategory(2,"انظمة انذار الحريق","../assets/image1.jpg")
+]
+subCategoriesSurvSystem =[
+  this.subCategory(1,"كاميرات - شاشات - انظمة","../assets/surv/surv-system.jpg"),
+  // this.subCategory(2,"انظمة انذار الحريق","../assets/image1.jpg")
+]
+subCategoriesAccessControl =[
+  this.subCategory(1,"اجهزة الدخول - انظمة الدخول","../assets/access-control/Access_Control.webp"),
+  // this.subCategory(2,"انظمة انذار الحريق","../assets/image1.jpg")
+]
+subCategoriesSafety =[
+  this.subCategory(1,"السلامة المهنية","../assets/safety/safety.jpg"),
+  // this.subCategory(2,"انظمة انذار الحريق","../assets/image1.jpg")
+]
+subCategoriesMedicalSafety =[
+  this.subCategory(1,"معدات السلامة الطبية","../assets/medical-safety/medical-safety.jpg"),
+  // this.subCategory(2,"انظمة انذار الحريق","../assets/image1.jpg")
+]
+subCategoriesOtherProducts =[
+  this.subCategory(1,"اجهزة طرد الفئران","../assets/other-products/mouse-out.jpg"),
   // this.subCategory(2,"انظمة انذار الحريق","../assets/image1.jpg")
 ]
 
@@ -46,11 +66,11 @@ my = 0
   category= [
     { "id": 1, "name": "إطفاء الحرائق" , "sub_categories":this.subCategoriesFireFighting },
     { "id": 2, "name": "انذار السرقة" , "sub_categories":this.subCategoriesBurgularAlarm  },
-    { "id": 3, "name": "أنظمة المراقبة" },
-    { "id": 4, "name": "أنظمة التحكم والوصول" },
-    { "id": 6, "name": "السلامة المهنية" },
-    { "id": 7, "name": "السلامة الطبية" },
-    { "id": 8, "name": "منتجات اخرى" }
+    { "id": 3, "name": "أنظمة المراقبة" ,"sub_categories":this.subCategoriesSurvSystem},
+    { "id": 4, "name": "أنظمة التحكم والوصول" ,"sub_categories":this.subCategoriesAccessControl},
+    { "id": 6, "name": "السلامة المهنية" ,"sub_categories":this.subCategoriesSafety},
+    { "id": 7, "name": "السلامة الطبية" ,"sub_categories":this.subCategoriesMedicalSafety},
+    { "id": 8, "name": "منتجات اخرى","sub_categories":this.subCategoriesOtherProducts }
   ]
   // category375_425= this.category0_374.concat( [
   //   ,
