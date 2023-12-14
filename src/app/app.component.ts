@@ -185,7 +185,7 @@ my = 0
   onWindowResize() {
     this.width = window.innerWidth
   }
-  title = 'مجموعة ابو عامر للامن والسلامة';
+  title = '.مجموعة ابو عامر للامن والسلامة';
   al() {
     alert("mustafa")
   }
