@@ -1,0 +1,47 @@
+<div class="category-container">
+    <ng-template ngFor let-item [ngForOf]="categories" let-c="index">
+      <div class="category">
+        <div class="category-title">
+          {{item.name}}
+        </div>
+        <div class="sub-category">
+          <div attr.id="carouselExampleIndicators{{c}}" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <ng-template ngFor let-button [ngForOf]="item.sub_categories" let-i="index">
+                <button type="button" attr.data-bs-target="#carouselExampleIndicators{{c}}" attr.data-bs-slide-to="{{i}}"
+                  [ngClass]="{active:i==0}" aria-current="true" aria-label="Slide 2">
+  
+                </button>
+              </ng-template>
+            </div>
+            <div class="carousel-inner">
+              <ng-template ngFor let-sub_item [ngForOf]="item.sub_categories" let-b="index">
+                <div class="carousel-item" [ngClass]="{active:b==0}">
+                  <div>
+                    {{sub_item.sub_category_name}}
+                  </div>
+                  <img class="sub-category-image" src={{sub_item.sub_category_image}} alt="" srcset="">
+                </div>
+              </ng-template>
+  
+            </div>
+            <button class="carousel-control-prev" type="button" attr.data-bs-target="#carouselExampleIndicators{{c}}"
+              data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" attr.data-bs-target="#carouselExampleIndicators{{c}}"
+              data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+  
+       <a href="#" class="category-button">
+        عرض الكل
+       </a>
+      </div>
+      
+    </ng-template>
+  </div>

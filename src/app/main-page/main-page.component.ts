@@ -1,19 +1,19 @@
-import { Component, HostListener, OnInit, PLATFORM_ID, Inject } from '@angular/core';
-import { isPlatformBrowser } from '@angular/common';
-// import { getWindow } from "ssr-window";
-import { ApiHandlerService } from './services/api-handler.service';
-import { log } from 'console';
+import { Component } from '@angular/core';
+import { inject } from '@angular/core/testing';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  selector: 'app-main-page',
+  templateUrl: './main-page.component.html',
+  styleUrl: './main-page.component.css'
 })
-export class AppComponent implements OnInit {
+export class MainPageComponent {
+
+  name: any;
   isBrowserPaltform = false
 
   apiData:any
-  constructor(@Inject(PLATFORM_ID) private _platformId: Object,private postsServices:ApiHandlerService) { }
+
 
 //   var donut: DonutChartModel = {
 //     dimension: 1,
@@ -166,15 +166,19 @@ my = 0
     }
   }
 
+  constructor(private _route: ActivatedRoute) {}
 
 
   ngOnInit() {
-    if (isPlatformBrowser(this._platformId)) {
-      console.log(this.category)
-      this.initLang()
-      this.initMode()
+    const id=this._route.snapshot.paramMap.get('name');
+    console.log("called for: "+id);
+   
+    // if (isPlatformBrowser(this._platformId)) {
+    //   console.log(this.category)
+    //   this.initLang()
+    //   this.initMode()
      
-    }
+    // }
 
 
     // this.postsServices.fetchDataFrpApi().subscribe((data)=>{
@@ -188,10 +192,7 @@ my = 0
   //     this.width = window.innerWidth
   // }
 
-  @HostListener('window:resize', ['$event'])
-  onWindowResize() {
-    this.width = window.innerWidth
-  }
+
   title = '.مجموعة ابو عامر للامن والسلامة';
   al() {
     alert("mustafa")

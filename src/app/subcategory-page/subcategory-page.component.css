@@ -1,0 +1,45 @@
+.category{
+    border: 1px solid;
+    margin: 15px;
+    border-radius: 10px;
+    /* height: 52vh; */
+    width: 41vh;
+    text-align: center;
+
+    /* height: 40dvw; */
+}
+
+/* .category:hover{
+   cursor: pointer;
+} */
+.category-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.category-title{
+    text-align: center;
+    background: brown;
+    color: white;
+    padding: 10px;
+    border-radius: 8px 8px 0px 0px
+}
+.category-button{
+    text-align: center;
+    background: brown;
+    color: white;
+    padding: 10px;
+    border-radius: 0px 0px 8px 8px;
+    display: block;
+}
+
+.sub-category-image{
+    text-align: center;
+
+    border: 1px solid;
+    border-radius: 15px;
+    margin: 12px;
+    height: 30vh;
+    width: 38vh;
+}
