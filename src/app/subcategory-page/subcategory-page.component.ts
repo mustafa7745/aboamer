@@ -57,10 +57,12 @@ export class SubcategoryPageComponent {
   
 
   ngOnInit() {
+    
     this.route
       .params
       .subscribe(params => {
         this.name = this.route.snapshot.paramMap.get('name');
+        window.scrollTo({top:0})
         console.log("called for: " + this.name);
       });
   }
